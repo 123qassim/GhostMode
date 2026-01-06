@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "GhostMode | Auto-Solver",
+  "version": "2.2",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": [
+    "https://autofill-site.onrender.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["floating.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

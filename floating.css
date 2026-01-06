@@ -1,0 +1,37 @@
+/* The Floating Ghost Button */
+#ghost-trigger-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    cursor: pointer;
+    z-index: 2147483647; /* Maximum z-index to stay on top of everything */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+#ghost-trigger-btn:hover {
+    transform: scale(1.1);
+    background-color: #000;
+}
+
+/* The "Thinking" Animation */
+.ghost-thinking {
+    animation: ghost-spin 1s infinite linear;
+    background-color: #f1c40f !important; /* Yellow */
+    cursor: wait;
+}
+
+@keyframes ghost-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
